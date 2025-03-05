@@ -1,0 +1,48 @@
+.navbar-container {
+  display: flex;
+  flex-direction: row;
+  color: aliceblue;
+  justify-content: space-between;
+  margin-right: 32px;
+  margin-left: 32px;
+}
+.navbar-components {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: aliceblue;
+  gap: 20px;
+}
+.navbar-components a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 32px;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.navbar-components a:hover {
+  color: #ff5e00; /* Change color when hovered */
+}
+
+/* Shopping Cart Icon */
+.add-to-cart {
+  font-size: 24px;
+  margin-top: 32px;
+  transition: color 0.3s ease-in-out;
+}
+.add-to-cart a:hover {
+  color: #ff5e00;
+}
+.homepage-container {
+  width: 100%;
+  height: 700px;
+  background-image: url("/assets/images/flower-shop.jpg");
+  background-position: center;
+  background-size: cover;
+  margin: 0;
+}
+.flower-shop-logo {
+  margin-top: 32px;
+}

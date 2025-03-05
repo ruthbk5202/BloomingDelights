@@ -1,0 +1,55 @@
+.second_component {
+  background-color: blanchedalmond;
+  height: 200px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 32px;
+}
+
+.grid-item {
+  text-align: center;
+  background-color: none;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+img {
+  width: 300px;
+  height: 300px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 42px;
+}
+.img-btn-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.img-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: rgba(255, 166, 0, 0.655);
+
+  width: 60px;
+  border-radius: 24px;
+  margin-bottom: 16px;
+}
+.img-btn a {
+  color: rgba(255, 166, 0, 0.655);
+}
+.bouquet-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 4px;
+}
