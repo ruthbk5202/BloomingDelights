@@ -1,0 +1,89 @@
+.footer {
+    background-color: white;
+    color: #333;
+    padding: 48px 16px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .interestSection {
+    margin-bottom: 32px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .sectionTitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .interestLinks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+  
+  .mainFooter {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto 32px;
+  }
+  
+  .footerColumn {
+    margin-bottom: 24px;
+  }
+  
+  .columnTitle {
+    font-weight: bold;
+    margin-bottom: 16px;
+    font-size: 16px;
+  }
+  
+  .linkList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .linkList li {
+    margin-bottom: 8px;
+  }
+  
+  .footerLink {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .footerLink:hover {
+    color: #4CAF50;
+    text-decoration: underline;
+  }
+  
+  .copyright {
+    text-align: center;
+    padding-top: 24px;
+    border-top: 1px solid #eee;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 14px;
+  }
+  
+  .cookiePolicy {
+    margin-top: 16px;
+    font-size: 12px;
+    color: #666;
+  }
+  
+  @media (max-width: 768px) {
+    .mainFooter {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .interestLinks {
+      grid-template-columns: 1fr;
+    }
+  }

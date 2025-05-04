@@ -1,4 +1,5 @@
 "use client";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { MdOutlineShoppingCart } from "react-icons/md";
@@ -6,6 +7,7 @@ import "./second_component.css";
 
 const Secondcomponent = () => {
   const [speciesListResponse, setData] = useState<any[]>([]);
+  const router = useRouter();
   const [rating, setRating] = useState<number>(0);
   async function fetchData() {
     try {
@@ -36,7 +38,6 @@ const Secondcomponent = () => {
         {speciesListResponse.length > 0 ? (
           speciesListResponse.slice(0, 6).map((e, i) => (
             <div key={e.id} className="grid-item">
-             
               <div className="img-btn-group">
                 <div className="img-btn">
                   <button className="img-btn-sale">sale!</button>
@@ -52,6 +53,8 @@ const Secondcomponent = () => {
                   <img
                     src={e.default_image.original_url}
                     alt={e.default_image.license_name}
+                    onClick={() => router.push(`/product_details/${e.id}`)}
+                    style={{ cursor: "pointer" }}
                   />
                   <div className="bouquet-description">
                     <p className="">Bouquet</p>

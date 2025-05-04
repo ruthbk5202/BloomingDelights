@@ -2,6 +2,7 @@
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { Link } from "react-router-dom";
 import Secondcomponent from "../components/home-component/SecondComponent";
+import Footer from "../components/footer/Footer";
 import "./home.css";
 const HomePage = () => {
   return (
@@ -25,6 +26,7 @@ const HomePage = () => {
         </nav>
       </div>
       <Secondcomponent />
+      <Footer/>
     </div>
   );
 };
