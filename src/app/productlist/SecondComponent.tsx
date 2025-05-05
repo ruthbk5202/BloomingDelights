@@ -5,39 +5,60 @@ import { FaStar } from "react-icons/fa";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import "./second_component.css";
 
+interface Plant {
+  id: number;
+  common_name: string;
+  default_image?: {
+    original_url: string;
+    license_name?: string;
+  };
+}
+
 const Secondcomponent = () => {
-  const [speciesListResponse, setData] = useState<any[]>([]);
+  const [plants, setPlants] = useState<Plant[]>([]);
+  const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true);
   const router = useRouter();
   const [rating, setRating] = useState<number>(0);
-  async function fetchData() {
+
+  async function fetchPlants() {
     try {
-      const r = await fetch(
-        "https://perenual.com/api/v2/species-list?key=sk-NLDI67c1e204dd7178890"
+      const response = await fetch(
+        `https://perenual.com/api/v2/species-list?key=sk-H4Cx681898c5673b910245`
       );
-      const s = await r.json();
-      console.log("API Response:", s);
-      if (s.data) {
-        setData(s.data);
+      
+      if (!response.ok) {
+        throw new Error(`API request failed with status ${response.status}`);
       }
-    } catch (error) {
-      console.error("Error fetching data:", error);
+
+      const result = await response.json();
+      
+      if (result.data && Array.isArray(result.data)) {
+        setPlants(result.data);
+        console.log(result.data);
+      } else {
+        throw new Error("Unexpected API response structure");
+      }
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Unknown error");
+    } finally {
+      setLoading(false);
     }
   }
 
   useEffect(() => {
-    fetchData();
+    fetchPlants();
   }, []);
 
-  useEffect(() => {
-    console.log("Updated speciesListResponse:", speciesListResponse);
-  }, [speciesListResponse]);
+  if (loading) return <div>Loading plants...</div>;
+  if (error) return <div className="error">Error: {error}</div>;
 
   return (
     <div className="second-component">
       <div className="grid-container">
-        {speciesListResponse.length > 0 ? (
-          speciesListResponse.slice(0, 6).map((e, i) => (
-            <div key={e.id} className="grid-item">
+        {plants.length > 0 ? (
+          plants.slice(0, 6).map((plants) => (
+            <div key={plants.id} className="grid-item">
               <div className="img-btn-group">
                 <div className="img-btn">
                   <button className="img-btn-sale">sale!</button>
@@ -48,17 +69,17 @@ const Secondcomponent = () => {
                   </a>
                 </div>
               </div>
-              {e.default_image ? (
+              {plants.default_image ? (
                 <>
                   <img
-                    src={e.default_image.original_url}
-                    alt={e.default_image.license_name}
-                    onClick={() => router.push(`/product_details/${e.id}`)}
+                    src={plants.default_image.original_url}
+                    alt={plants.default_image.license_name}
+                    onClick={() => router.push(`/product_details/${plants.id}`)}
                     style={{ cursor: "pointer" }}
                   />
                   <div className="bouquet-description">
                     <p className="">Bouquet</p>
-                    <p>{e.common_name}</p>
+                    <p>{plants.common_name}</p>
                     <div style={{ display: "flex" }}>
                       {[1, 2, 3, 4, 5].map((star) => (
                         <FaStar
@@ -79,7 +100,7 @@ const Secondcomponent = () => {
             </div>
           ))
         ) : (
-          <p>Loading...</p>
+          <p>No plants found</p>
         )}
       </div>
     </div>
