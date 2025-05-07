@@ -1,0 +1,44 @@
+
+.authContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f9f3f0;
+    font-family: 'Arial', sans-serif;
+    padding: 1rem;
+  }
+  
+  .authHeader {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .authTitle {
+    color: #e83e8c;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+  }
+  
+  .authSubtitle {
+    color: #5a8f7b;
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  
+  .authFormContainer {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .authFooter {
+    margin-top: 2rem;
+    color: #888;
+    font-size: 0.9rem;
+  }

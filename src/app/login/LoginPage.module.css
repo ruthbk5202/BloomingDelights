@@ -1,0 +1,89 @@
+/* styles/LoginPage.module.css */
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .formGroup label {
+    color: #5a8f7b;
+    font-weight: 500;
+  }
+  
+  .formGroup input {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+  }
+  
+  .formGroup input:focus {
+    border-color: #e83e8c;
+    outline: none;
+  }
+  
+  .formOptions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .rememberMe {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .rememberMe label {
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  .forgotPassword {
+    color: #e83e8c;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  
+  .forgotPassword:hover {
+    text-decoration: underline;
+  }
+  
+  .loginButton {
+    background-color: #e83e8c;
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .loginButton:hover {
+    background-color: #d42d7b;
+  }
+  
+  .registerLink {
+    text-align: center;
+    margin-top: 1rem;
+    color: #666;
+  }
+  
+  .registerLink a {
+    color: #5a8f7b;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .registerLink a:hover {
+    text-decoration: underline;
+  }

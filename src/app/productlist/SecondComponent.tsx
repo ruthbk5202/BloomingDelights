@@ -78,9 +78,9 @@ const Secondcomponent = () => {
                     style={{ cursor: "pointer" }}
                   />
                   <div className="bouquet-description">
-                    <p className="">Bouquet</p>
+                    {/* <p className="">Bouquet</p> */}
                     <p>{plants.common_name}</p>
-                    <div style={{ display: "flex" }}>
+                    {/* <div style={{ display: "flex" }}>
                       {[1, 2, 3, 4, 5].map((star) => (
                         <FaStar
                           key={star}
@@ -90,8 +90,9 @@ const Secondcomponent = () => {
                           style={{ cursor: "pointer" }}
                         />
                       ))}
-                    </div>
-                    <p>$500</p>
+                    </div> */}
+                    <p>Nrs:500</p>
+                    <button className="add-to-cart">Add to cart</button>
                   </div>
                 </>
               ) : (

@@ -13,8 +13,8 @@ const HomePage = () => {
             <Link to="/">Flower Shop</Link>
           </div>
           <div className="navbar-components">
-            <a href="/">home</a>
-            <a href="/">about</a>
+            <a href="/">categories</a>
+           
             <a href="/">shop</a>
             <a href="/">contact</a>
           </div>
@@ -26,7 +26,7 @@ const HomePage = () => {
         </nav>
       </div>
       <Secondcomponent />
-      <Footer/>
+      <Footer />
     </div>
   );
 };
