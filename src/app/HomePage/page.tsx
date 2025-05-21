@@ -19,7 +19,7 @@ const HomePage = () => {
             <a href="/">contact</a>
           </div>
           <div className="add-to-cart">
-            <a href="/">
+            <a href="/login">
               <MdOutlineShoppingCart />
             </a>
           </div>
