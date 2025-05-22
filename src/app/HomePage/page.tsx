@@ -10,7 +10,7 @@ const HomePage = () => {
       <div className="homepage-container">
         <nav className="navbar-container">
           <div className="flower-shop-logo">
-            <Link to="/">Flower Shop</Link>
+            <Link to="/">Blooming Delights</Link>
           </div>
           <div className="navbar-components">
             <a href="/">categories</a>

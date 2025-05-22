@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import "./second_component.css";
+import AddToCart from "../components/reuseable/AddToCart";
 
 interface Plant {
   id: number;
@@ -78,21 +79,11 @@ const Secondcomponent = () => {
                     style={{ cursor: "pointer" }}
                   />
                   <div className="bouquet-description">
-                    {/* <p className="">Bouquet</p> */}
+                  
                     <p>{plants.common_name}</p>
-                    {/* <div style={{ display: "flex" }}>
-                      {[1, 2, 3, 4, 5].map((star) => (
-                        <FaStar
-                          key={star}
-                          size={30}
-                          color={star <= rating ? "#ffd700" : "#e4e5e9"}
-                          onClick={() => setRating(star)}
-                          style={{ cursor: "pointer" }}
-                        />
-                      ))}
-                    </div> */}
+                   
                     <p>Nrs:500</p>
-                    <button className="add-to-cart">Add to cart</button>
+                   <AddToCart>add to cart</AddToCart>
                   </div>
                 </>
               ) : (

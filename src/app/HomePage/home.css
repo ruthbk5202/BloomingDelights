@@ -23,7 +23,7 @@
 
 /* Hover Effect */
 .navbar-components a:hover {
-  color: #ff5e00; /* Change color when hovered */
+  color: #FAA4BD; /* Change color when hovered */
 }
 
 /* Shopping Cart Icon */
@@ -33,9 +33,10 @@
   transition: color 0.3s ease-in-out;
 }
 .add-to-cart a:hover {
-  color: #ff5e00;
+ 
 }
 
 .flower-shop-logo {
   margin-top: 32px;
+  color: #e83e8c;
 }

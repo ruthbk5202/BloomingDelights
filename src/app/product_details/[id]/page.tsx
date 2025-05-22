@@ -2,6 +2,9 @@
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import "./product.css";
+import AddToCart from "@/app/components/reuseable/AddToCart";
+import QuantityButton from "@/app/components/reuseable/Quantity";
+import { FaRegHeart } from "react-icons/fa";
 
 interface Product {
   id: number;
@@ -65,49 +68,58 @@ export default function ProductDetailsPage() {
   if (!product) return <div>No product found</div>;
 
   return (
-    <div className="product-details">
-      <h1>{product.common_name}</h1>
-      
-      <div className="scientific-name">
-        <strong>Scientific Name:</strong> {product.scientific_name?.[0] || "Not available"}
-      </div>
-      
-      {product.other_name && product.other_name.length > 0 && (
-        <div className="other-names">
-          <strong>Also known as:</strong> {product.other_name.join(", ")}
-        </div>
-      )}
-      
-      {product.family && (
-        <div className="family">
-          <strong>Family:</strong> {product.family}
-        </div>
-      )}
+     <div className="add-to-cart-product-details">
+      <div className="product-details-container"> 
+        {product.default_image?.original_url ? (
+          <div className="image-container">
+            <img
+              src={product.default_image.original_url}
+              alt={product.common_name}
+              className="plant-image"
+              width={400}
+              height={400}
+            />
+          </div>
+        ) : (
+          <div className="no-image">No image available</div>
+        )}
 
-      {product.default_image?.original_url ? (
-        <img
-          src={product.default_image.original_url}
-          alt={product.common_name}
-          className="plant-image"
-          width={400}
-          height={400}
-        />
-      ) : (
-        <div className="no-image">No image available</div>
-      )}
+        <div className="details-container">
+          <FaRegHeart className="faregheart" />
+          <h1>{product.common_name}</h1>
+          
+          <div className="scientific-name">
+            <strong>Scientific Name:</strong> {product.scientific_name?.[0] || "Not available"}
+          </div>
+          
+          {product.other_name && product.other_name.length > 0 && (
+            <div className="other-names">
+              <strong>Also known as:</strong> {product.other_name.join(", ")}
+            </div>
+          )}
+          
+          {product.family && (
+            <div className="family">
+              <strong>Family:</strong> {product.family}
+            </div>
+          )}
 
-      <div className="care-info">
-        {product.watering && (
-          <p><strong>Watering:</strong> {product.watering}</p>
-        )}
-        
-        {product.cycle && (
-          <p><strong>Life Cycle:</strong> {product.cycle}</p>
-        )}
-        
-        {product.sunlight && product.sunlight.length > 0 && (
-          <p><strong>Sunlight:</strong> {product.sunlight.join(", ")}</p>
-        )}
+          <div className="care-info">
+            {product.watering && (
+              <p><strong>Watering:</strong> {product.watering}</p>
+            )}
+            
+            {product.cycle && (
+              <p><strong>Life Cycle:</strong> {product.cycle}</p>
+            )}
+            
+            {product.sunlight && product.sunlight.length > 0 && (
+              <p><strong>Sunlight:</strong> {product.sunlight.join(", ")}</p>
+            )}
+          </div>
+          <QuantityButton />
+          <AddToCart>add to cart</AddToCart>
+        </div>
       </div>
     </div>
   );

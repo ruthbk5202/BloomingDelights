@@ -1,15 +1,20 @@
 .second_component {
   background-color: blanchedalmond;
-  height: 200px;
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
-  max-width:1000px;
-
-  margin-top: 32px;
+  justify-content: center;
+  align-items: center;
+  margin: 32px;
 }
 
 .grid-item {
@@ -17,8 +22,8 @@
   background-color: none;
   padding: 20px;
   border-radius: 10px;
-  width:300px;
-  height:400px;
+  width: 300px;
+  height: 400px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 img {
@@ -39,11 +44,14 @@ img {
   align-items: center;
   justify-content: center;
   color: white;
-  background-color: rgba(255, 166, 0, 0.655);
+  background-color:#FAA4BD;
 
   width: 60px;
   border-radius: 24px;
   margin-bottom: 16px;
+}
+.img-btn .img-btn-sale{
+  color:white;
 }
 .img-btn a {
   color: rgba(255, 166, 0, 0.655);
@@ -55,12 +63,14 @@ img {
   align-items: center;
   margin: 4px;
 }
-.add-to-cart{
-  border:1px solid #ccc;
+.add-to-cart {
+  border: 1px solid #ccc;
   background-color: chocolate;
   color: white;
-  padding:2px;
   border-radius: 4px;
-  font-size:2px;
-  font-family: 'Times New Roman', Times, serif;
+
+ text-align: center;
+  width:126px;
+  height:32px;
+  font-family: "Times New Roman", Times, serif;
 }
