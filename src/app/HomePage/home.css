@@ -21,19 +21,16 @@
   transition: color 0.3s ease-in-out;
 }
 
-/* Hover Effect */
+
 .navbar-components a:hover {
-  color: #FAA4BD; /* Change color when hovered */
+  color: #FAA4BD; 
 }
 
-/* Shopping Cart Icon */
+
 .add-to-cart {
   font-size: 24px;
   margin-top: 32px;
   transition: color 0.3s ease-in-out;
-}
-.add-to-cart a:hover {
- 
 }
 
 .flower-shop-logo {

@@ -5,6 +5,8 @@ import "./product.css";
 import AddToCart from "@/app/components/reuseable/AddToCart";
 import QuantityButton from "@/app/components/reuseable/Quantity";
 import { FaRegHeart } from "react-icons/fa";
+import BuyNow from "@/app/buynow/page";
+import BuyNowButton from "@/app/components/reuseable/BuyNowButton";
 
 interface Product {
   id: number;
@@ -118,7 +120,10 @@ export default function ProductDetailsPage() {
             )}
           </div>
           <QuantityButton />
+          <div className="action-buttons">
+           <BuyNowButton />
           <AddToCart>add to cart</AddToCart>
+          </div>
         </div>
       </div>
     </div>

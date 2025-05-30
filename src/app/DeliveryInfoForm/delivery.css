@@ -1,0 +1,81 @@
+.delivery-info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ padding:20px;
+ 
+}
+.delivery-info-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap:42px;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+  width:780px;
+  margin-top: 32px;
+    padding: 20px;
+
+}
+
+input{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    border:1px solid #ddd;
+    border-radius: 4px;
+    height:42px;
+   
+}
+.delivery-btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:32px;
+}
+.save-btn {
+    display: flex;
+    
+    width:106px;
+
+    background-color: #e83e8c;
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.delivery-btns .office-btn{
+    display: flex;
+    
+    width:106px;
+
+    background-color: white;
+    color: #333333;
+    padding: 10px 20px;
+    border: 1px solid #25A5d8;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.delivery-btns .home-btn {
+    display: flex;
+    
+    width:106px;
+
+    background-color: white;
+    color: #333333;
+    padding: 10px 20px;
+    border: 1px solid #d3a5d6;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.delivery-info-heading{
+    font-size: 18px;
+    color:#212121;
+    font-weight: 600;
+    width:786px;
+}
