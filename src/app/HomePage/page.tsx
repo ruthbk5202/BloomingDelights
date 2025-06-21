@@ -3,6 +3,7 @@ import { MdOutlineShoppingCart } from "react-icons/md";
 import { Link } from "react-router-dom";
 import Secondcomponent from "../productlist/SecondComponent";
 import Footer from "../components/footer/Footer";
+import HeroSection from "../components/herosection/HeroSection";
 import "./home.css";
 const HomePage = () => {
   return (
@@ -12,6 +13,7 @@ const HomePage = () => {
           <div className="flower-shop-logo">
             <Link to="/">Blooming Delights</Link>
           </div>
+          <HeroSection/>
           <div className="navbar-components">
             <a href="/">categories</a>
            
