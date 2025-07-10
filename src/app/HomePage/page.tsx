@@ -13,20 +13,20 @@ const HomePage = () => {
           <div className="flower-shop-logo">
             <Link to="/">Blooming Delights</Link>
           </div>
-          <HeroSection/>
           <div className="navbar-components">
             <a href="/">categories</a>
-           
+
             <a href="/">shop</a>
             <a href="/">contact</a>
           </div>
-          <div className="add-to-cart">
-            <a href="/login">
-              <MdOutlineShoppingCart />
+            <a href="/login" className="login-container">
+             <button className="login">Login</button> 
+              <MdOutlineShoppingCart className="cart" />
             </a>
-          </div>
+         
         </nav>
       </div>
+          <HeroSection/>
       <Secondcomponent />
       <Footer />
     </div>

@@ -15,17 +15,16 @@ const HeroSection: React.FC<HeroSectionProps> = ({
     subtitle = "Fresh flowers for every occasion",
     primaryButtonText = "Shop Now",
     secondaryButtonText = "Learn More",
-    backgroundImageUrl = "https://example.com/flowers-hero.jpg"
+    backgroundImageUrl = "/assets/images/iiiiii.jpg"
 }) => {
     const handlePrimaryButtonClick = () => {
         console.log('Primary button clicked - navigate to shop');
-        // In a real app, you would navigate to the shop page
-        // window.location.href = '/shop';
+       
     };
 
     const handleSecondaryButtonClick = () => {
         console.log('Secondary button clicked - show more info');
-        // In a real app, you might show a modal or scroll to about section
+        
     };
 
     return (
