@@ -5,6 +5,7 @@ import Secondcomponent from "../productlist/SecondComponent";
 import Footer from "../components/footer/Footer";
 import HeroSection from "../components/herosection/HeroSection";
 import "./home.css";
+import MostPopular from "../components/mostpopular/MostPopular";
 const HomePage = () => {
   return (
     <div>
@@ -28,6 +29,7 @@ const HomePage = () => {
       </div>
           <HeroSection/>
       <Secondcomponent />
+      <MostPopular/>
       <Footer />
     </div>
   );

@@ -1,0 +1,44 @@
+.popular-product-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    margin: 20px;
+}
+h1{
+    font-size: 32px;
+    font-weight: 600;
+}
+span{
+    color: #ff6b6b;
+}
+.lia{
+    font-size: 32px;
+    font-weight: 500;
+      color: #ff6b6b;
+    
+    
+
+}
+.popular-product-item{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    text-align: center;
+}
+.popular-products-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.popular-product-item img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
