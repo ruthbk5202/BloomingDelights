@@ -5,7 +5,7 @@ import "./product.css";
 import AddToCart from "@/app/components/reuseable/AddToCart";
 import QuantityButton from "@/app/components/reuseable/Quantity";
 import { FaRegHeart } from "react-icons/fa";
-import BuyNow from "@/app/buynow/page";
+
 import BuyNowButton from "@/app/components/reuseable/BuyNowButton";
 
 interface Product {

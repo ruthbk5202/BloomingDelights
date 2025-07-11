@@ -1,6 +1,6 @@
 "use client";
 import { useState } from 'react';
-import AuthLayout from '../components/authLayout/AuthLayout';
+
 import styles from './LoginPage.module.css';
 
 const LoginPage = () => {
@@ -15,7 +15,7 @@ const LoginPage = () => {
   };
 
   return (
-    <AuthLayout title="Welcome Back">
+    <div title="Welcome Back">
       <form onSubmit={handleSubmit} className={styles.loginForm}>
         <div className={styles.formGroup}>
           <label htmlFor="email">Email</label>
@@ -58,7 +58,7 @@ const LoginPage = () => {
           Don't have an account? <a href="/register">Sign up</a>
         </div>
       </form>
-    </AuthLayout>
+    </div>
   );
 };
 
