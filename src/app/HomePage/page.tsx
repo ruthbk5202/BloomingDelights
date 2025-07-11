@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Secondcomponent from "../productlist/SecondComponent";
 import Footer from "../components/footer/Footer";
 import HeroSection from "../components/herosection/HeroSection";
+import Delivery from "../components/deliverydate/Delivery";
 import "./home.css";
 import MostPopular from "../components/mostpopular/MostPopular";
 const HomePage = () => {
@@ -30,6 +31,7 @@ const HomePage = () => {
           <HeroSection/>
       <Secondcomponent />
       <MostPopular/>
+      <Delivery />
       <Footer />
     </div>
   );

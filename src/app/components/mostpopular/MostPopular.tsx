@@ -41,6 +41,9 @@ const MostPopular = () => {
                 </div>
             ))}
         </div>
+        <div className='customer-say'>
+            <h1>What do <span>customers </span>say about us?</h1>
+        </div>
     </div>
   )
 }

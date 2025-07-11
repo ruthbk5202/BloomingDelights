@@ -42,3 +42,10 @@ span{
     object-fit: cover;
     border-radius: 10px;
 }
+.customer-say{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}

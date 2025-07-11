@@ -1,5 +1,5 @@
 import React, { ReactNode, ButtonHTMLAttributes, useState } from "react";
-import "./AddToCart.css"; 
+import "./addtoCart.css"; 
 
 interface AddToCartProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
