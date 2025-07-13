@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaCalendarAlt, FaTruck, FaUser, FaBriefcase } from 'react-icons/fa';
-import "./delivery.css"; // Import icons from react-icons
+import "./delivery.css"; 
 
 const Delivery = () => {
   return (

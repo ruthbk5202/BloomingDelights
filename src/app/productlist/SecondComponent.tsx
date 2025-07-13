@@ -1,10 +1,10 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { FaStar } from "react-icons/fa";
+
 import { MdOutlineShoppingCart } from "react-icons/md";
 import "./second_component.css";
-import AddToCart from "../components/reuseable/AddToCart";
+// import AddToCart from "../components/reuseable/AddToCart";
 
 interface Plant {
   id: number;
@@ -83,7 +83,7 @@ const Secondcomponent = () => {
                     <p>{plants.common_name}</p>
                    
                     <p>Nrs:500</p>
-                   <AddToCart>add to cart</AddToCart>
+                   {/* <AddToCart>add to cart</AddToCart> */}
                   </div>
                 </>
               ) : (

@@ -81,4 +81,4 @@ const DeliveryInfoForm = () => {
   )
 }
 
-export default DeliveryInfoForm
+export default DeliveryInfoForm;

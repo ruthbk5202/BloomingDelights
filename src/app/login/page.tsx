@@ -1,7 +1,7 @@
 "use client";
 import { useState } from 'react';
 
-import styles from './LoginPage.module.css';
+import './login.css';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -16,8 +16,8 @@ const LoginPage = () => {
 
   return (
     <div title="Welcome Back">
-      <form onSubmit={handleSubmit} className={styles.loginForm}>
-        <div className={styles.formGroup}>
+      <form onSubmit={handleSubmit} className="loginForm">
+        <div className="formGroup">
           <label htmlFor="email">Email</label>
           <input
             type="email"
@@ -27,7 +27,7 @@ const LoginPage = () => {
             required
           />
         </div>
-        <div className={styles.formGroup}>
+        <div className="formGroup">
           <label htmlFor="password">Password</label>
           <input
             type="password"
@@ -37,8 +37,8 @@ const LoginPage = () => {
             required
           />
         </div>
-        <div className={styles.formOptions}>
-          <div className={styles.rememberMe}>
+        <div className="formOptions">
+          <div className="rememberMe">
             <input
               type="checkbox"
               id="rememberMe"
@@ -47,14 +47,14 @@ const LoginPage = () => {
             />
             <label htmlFor="rememberMe">Remember me</label>
           </div>
-          <a href="#" className={styles.forgotPassword}>
+          <a href="#" className="forgotPassword">
             Forgot password?
           </a>
         </div>
-        <button type="submit" className={styles.loginButton}>
+        <button type="submit" className="loginButton">
           Sign In
         </button>
-        <div className={styles.registerLink}>
+        <div className="registerLink">
           Don't have an account? <a href="/register">Sign up</a>
         </div>
       </form>

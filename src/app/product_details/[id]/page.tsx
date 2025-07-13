@@ -2,7 +2,7 @@
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import "./product.css";
-import AddToCart from "@/app/components/reuseable/AddToCart";
+
 import QuantityButton from "@/app/components/reuseable/Quantity";
 import { FaRegHeart } from "react-icons/fa";
 
@@ -122,7 +122,7 @@ export default function ProductDetailsPage() {
           <QuantityButton />
           <div className="action-buttons">
            <BuyNowButton />
-          <AddToCart>add to cart</AddToCart>
+          {/* <AddToCart>add to cart</AddToCart> */}
           </div>
         </div>
       </div>
