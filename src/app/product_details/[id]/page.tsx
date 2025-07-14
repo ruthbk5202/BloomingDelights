@@ -122,7 +122,7 @@ export default function ProductDetailsPage() {
           <QuantityButton />
           <div className="action-buttons">
            <BuyNowButton />
-          {/* <AddToCart>add to cart</AddToCart> */}
+        
           </div>
         </div>
       </div>

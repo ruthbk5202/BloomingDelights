@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 import { MdOutlineShoppingCart } from "react-icons/md";
 import "./second_component.css";
-// import AddToCart from "../components/reuseable/AddToCart";
+
 
 interface Plant {
   id: number;
