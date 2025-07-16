@@ -6,7 +6,7 @@ import "./product.css";
 import QuantityButton from "@/app/components/reuseable/Quantity";
 import { FaRegHeart } from "react-icons/fa";
 import Image from "next/image";
-// import BuyNowButton from "@/app/components/reuseable/BuyNowButton";
+import BuyNowButton from "@/app/components/reuseable/BuyNowButton";
 
 interface Product {
   id: number;
@@ -121,7 +121,7 @@ export default function ProductDetailsPage() {
           </div>
           <QuantityButton /> 
           <div className="action-buttons">
-           {/* <BuyNowButton /> */}
+           <BuyNowButton />
         
           </div>
         </div>
