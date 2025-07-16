@@ -75,22 +75,27 @@ const Delivery = () => {
       </button>
     </div>
     <div className='why-bloomingdelights'>
+
       <h1>Why BloomingDelights ?</h1>
       <h2 className='iamthinking'>Because I'm thinking of you.
 
       </h2>
+      <div>
       <p>At Blooming Delights, You can easily order the most beautiful bouquets and floral gifts for any occasion. Whether it's your birthday, thankyou, declaration of love, or just a simple gesture, we'll make sure your flowers are delivered right toyour door with a personal message </p>
       <p>With our extensive range of beautiful flowers for every season and occasion, you're sure to find what you're looking for. Choose cheerful tulips, lush roses, or a modern cut-flower bouquet: we'll make sure your gesture makes an impression.
-<p>
+</p>
   
     <ul>
       <li>
+        
 ✓ 7-day freshness guarantee</li>
 <li>
 ✓ Ordered before 1 p.m. = delivered today</li>
 <li>
-✓ Tested as best</li></ul></p>
-
+✓ Tested as best</li></ul>
+</div>
+<img src="/assets/images/why.jpg" className='why-img'></img>
+<p>
 Our flowers are arranged daily with attention to detail and a passion for the craft. Thanks to our in-house delivery service, we can be sure your bouquet will be delivered with the utmost care and attention.
 
 Order before 1:00 PM? Same-day delivery is even possible (excluding Sundays and public holidays). Prefer a different delivery date? We're happy to arrange that. You choose the time, and we'll take care of the rest.
@@ -99,7 +104,19 @@ Ordering for business? With a business account, you'll enjoy convenient features
 
 *Please note: delivery to the himalayas is unfortunately no longer possible.</p>
     </div>
+    <div className='grid-blooming-delights'>
+     <div>
+      <img src="/assets/images/whom.jpg"></img>
+     </div>
+     <div>
+      <h3>Who will you surprise with a Bouquet?</h3>
+      
+      <p>With Blooming Delights you deliver a personal message with a beautiful bouquet. Professionally tied and delivered by a regional florist.
+And the best part is: it's super fast. With a few clicks you have not only arranged a bouquet, but also arranged a smile on the face of the recipient. A loving gesture that gives someone a moment of attention and lets them feel: hey I'm thinking of you. This way you can be a little bit close even from a distance.</p>
+     </div>
     </div>
+    </div>
+    
   );
 };
 
