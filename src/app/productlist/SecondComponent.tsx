@@ -1,10 +1,9 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-
+import Image from "next/image";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import "./second_component.css";
-
 
 interface Plant {
   id: number;
@@ -20,7 +19,6 @@ const Secondcomponent = () => {
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const router = useRouter();
-  const [rating, setRating] = useState<number>(0);
 
   async function fetchPlants() {
     try {
@@ -58,8 +56,8 @@ const Secondcomponent = () => {
     <div className="second-component">
       <div className="grid-container">
         {plants.length > 0 ? (
-          plants.slice(0, 6).map((plants) => (
-            <div key={plants.id} className="grid-item">
+          plants.slice(0, 6).map((plant) => (
+            <div key={plant.id} className="grid-item">
               <div className="img-btn-group">
                 <div className="img-btn">
                   <button className="img-btn-sale">sale!</button>
@@ -70,20 +68,19 @@ const Secondcomponent = () => {
                   </a>
                 </div>
               </div>
-              {plants.default_image ? (
+              {plant.default_image ? (
                 <>
-                  <img
-                    src={plants.default_image.original_url}
-                    alt={plants.default_image.license_name}
-                    onClick={() => router.push(`/product_details/${plants.id}`)}
+                  <Image
+                    src={plant.default_image.original_url}
+                    alt={plant.common_name || "Plant image"}
+                    width={300}
+                    height={300}
+                    onClick={() => router.push(`/product_details/${plant.id}`)}
                     style={{ cursor: "pointer" }}
                   />
                   <div className="bouquet-description">
-                  
-                    <p>{plants.common_name}</p>
-                   
+                    <p>{plant.common_name}</p>
                     <p>Nrs:500</p>
-                   {/* <AddToCart>add to cart</AddToCart> */}
                   </div>
                 </>
               ) : (

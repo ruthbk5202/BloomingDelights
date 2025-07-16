@@ -9,7 +9,7 @@ const Footer = () => {
         <h3 className={styles.sectionTitle}>ALSO OF INTEREST</h3>
         <div className={styles.interestLinks}>
           <Link href="#" className={styles.footerLink}>All Flower Arrangements</Link>
-          <Link href="#" className={styles.footerLink}>Mother's Day Flowers</Link>
+          <Link href="#" className={styles.footerLink}>Mother&apos;s Day Flowers</Link>
           <Link href="#" className={styles.footerLink}>Farmers Choice Pecities</Link>
         </div>
       </div>

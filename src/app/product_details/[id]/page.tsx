@@ -5,7 +5,7 @@ import "./product.css";
 
 import QuantityButton from "@/app/components/reuseable/Quantity";
 import { FaRegHeart } from "react-icons/fa";
-
+import Image from "next/image";
 import BuyNowButton from "@/app/components/reuseable/BuyNowButton";
 
 interface Product {
@@ -74,7 +74,7 @@ export default function ProductDetailsPage() {
       <div className="product-details-container"> 
         {product.default_image?.original_url ? (
           <div className="image-container">
-            <img
+            <Image
               src={product.default_image.original_url}
               alt={product.common_name}
               className="plant-image"
@@ -119,7 +119,7 @@ export default function ProductDetailsPage() {
               <p><strong>Sunlight:</strong> {product.sunlight.join(", ")}</p>
             )}
           </div>
-          <QuantityButton />
+          <QuantityButton /> 
           <div className="action-buttons">
            <BuyNowButton />
         
