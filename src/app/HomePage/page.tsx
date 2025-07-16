@@ -1,7 +1,7 @@
 "use client";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import Link from "next/link";
-import Secondcomponent from "../productlist/SecondComponent";
+// import Secondcomponent from "../productlist/SecondComponent";
 import Footer from "../components/footer/Footer";
 import HeroSection from "../components/herosection/HeroSection";
 import Delivery from "../components/deliverydate/Delivery";
@@ -28,7 +28,7 @@ const HomePage = () => {
         </nav>
       </div>
       <HeroSection/>
-      <Secondcomponent />
+      {/* <Secondcomponent /> */}
       <MostPopular/>
       <Delivery />
       <Footer />
