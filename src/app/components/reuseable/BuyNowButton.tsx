@@ -3,7 +3,7 @@ import { useRouter } from 'next/navigation';
 import {useState} from 'react';
 
 const BuyNowButton = () => {
-  const [buyNow, setBuyNow] = useState(false);
+  const [_buyNow, setBuyNow] = useState(false);
   const router = useRouter(
     
   );
