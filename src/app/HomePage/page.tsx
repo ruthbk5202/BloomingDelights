@@ -17,10 +17,22 @@ const HomePage = () => {
             <Link href="/">Blooming Delights</Link>
           </div>
           <div className="navbar-components">
-            <Link href="/">categories</Link>
+            <Link href="/">category</Link>
             <Link href="/">shop</Link>
             <Link href="/">contact</Link>
           </div>
+          <select>
+  <optgroup label="Bouquet">
+    <option>flower</option>
+    <option>chocolate</option>
+    <option>Money</option>
+  </optgroup>
+  <optgroup label="Fashion">
+    <option>Men's Clothing</option>
+    <option>Women's Clothing</option>
+    <option>Accessories</option>
+  </optgroup>
+</select>
           <Link href="/login" className="login-container">
             <button className="login">Login</button> 
             <MdOutlineShoppingCart className="cart" />

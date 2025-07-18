@@ -44,6 +44,8 @@ const LoginPage = () => {
               <input type="radio" placeholder="Business"></input>
               <label>Company</label>
             </div>
+            <div className="loginButton">
+              <button>Register</button></div>
           </div>
         </form>
       </div>
