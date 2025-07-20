@@ -110,3 +110,9 @@
 .submenu:hover {
   display: block;
 }
+.login-cart-button{
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+}

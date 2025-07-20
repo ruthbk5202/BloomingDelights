@@ -5,10 +5,15 @@ import Link from "next/link";
 import Footer from "../components/footer/Footer";
 import HeroSection from "../components/herosection/HeroSection";
 import Delivery from "../components/deliverydate/Delivery";
+import {useRouter} from "next/navigation";
 import "./home.css";
 import MostPopular from "../components/mostpopular/MostPopular";
 
 const HomePage = () => {
+  const router = useRouter();
+  const handlecartClick =()=>{
+    router.push("/descriptionaddtocart");
+  }
   return (
     <div>
       <div className="homepage-container">
@@ -21,22 +26,13 @@ const HomePage = () => {
             <Link href="/">shop</Link>
             <Link href="/">contact</Link>
           </div>
-          <select>
-  <optgroup label="Bouquet">
-    <option>flower</option>
-    <option>chocolate</option>
-    <option>Money</option>
-  </optgroup>
-  <optgroup label="Fashion">
-    <option>Men's Clothing</option>
-    <option>Women's Clothing</option>
-    <option>Accessories</option>
-  </optgroup>
-</select>
+          <div className="login-cart-button">
           <Link href="/login" className="login-container">
             <button className="login">Login</button> 
-            <MdOutlineShoppingCart className="cart" />
           </Link>
+            <button>
+            <MdOutlineShoppingCart className="cart" onClick={handlecartClick} /></button>
+        </div>
         </nav>
       </div>
       <HeroSection/>
