@@ -1,4 +1,4 @@
-/* Main Container Styles */
+
 .container-description {
   display: flex;
   justify-content: center;
@@ -15,7 +15,7 @@
   max-width: 1200px;
 }
 
-/* Left Column - Products Section */
+
 .left-column {
   display: flex;
   flex-direction: column;

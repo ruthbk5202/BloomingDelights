@@ -10,7 +10,7 @@ const DescriptionAfterAddtocart = () => {
   return (
     <div className="container-description">
       <div className="description-addtocart-container">
-        {/* Left Column - Products Section */}
+      
         <div className="left-column">
           <div className="select-all">
             <div className="select-checkbox">
@@ -53,7 +53,7 @@ const DescriptionAfterAddtocart = () => {
           </div>
         </div>
 
-        {/* Right Column - Order Summary */}
+  
         <div className="order-summary">
           <div className="order-summary-header">
             <p>Location</p>
@@ -90,7 +90,8 @@ const DescriptionAfterAddtocart = () => {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+ 
   );
 };
 
