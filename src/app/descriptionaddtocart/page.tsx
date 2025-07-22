@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { RiDeleteBin7Line } from "react-icons/ri";
 import { CiShop } from "react-icons/ci";

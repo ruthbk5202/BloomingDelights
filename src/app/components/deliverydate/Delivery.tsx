@@ -1,4 +1,4 @@
-'use client'; // Ensures this component renders only on client-side
+'use client'; 
 
 import React from 'react';
 import { FaCalendarAlt, FaTruck, FaUser, FaBriefcase } from 'react-icons/fa';
@@ -10,7 +10,7 @@ import "./delivery.css";
 const Delivery = () => {
   return (
     <div className="delivery-container">
-      {/* Features Section */}
+    
       <div className="features-container">
         {[
           { icon: <FaCalendarAlt size={32} />, text: "Choose your own delivery date" },
@@ -27,7 +27,7 @@ const Delivery = () => {
         ))}
       </div>
 
-      {/* Rating Section */}
+     
       <div className='excellent'>
         <button className='button-review' aria-label="5-star rating">
           {[...Array(5)].map((_, i) => (
@@ -43,7 +43,6 @@ const Delivery = () => {
         </button>
       </div>
 
-      {/* About Section */}
       <section className='why-bloomingdelights'>
         <h1>Why BloomingDelights ?</h1>
         <h2 className='iamthinking'>Because I&apos;m thinking of you.</h2>
@@ -87,7 +86,7 @@ const Delivery = () => {
         </div>
       </section>
 
-      {/* Grid Section */}
+
       <section className='grid-blooming-delights'>
         <div className="grid-image">
           <Image 

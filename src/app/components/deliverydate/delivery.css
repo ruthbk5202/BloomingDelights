@@ -1,4 +1,4 @@
-/* Features Section */
+
 .features-container {
   display: flex;
   justify-content: space-between;
@@ -39,7 +39,7 @@
   color: #333;
 }
 
-/* Rating Section */
+
 .excellent {
   display: flex;
   align-items: center;
@@ -99,7 +99,7 @@
   cursor: pointer;
 }
 
-/* About Section */
+
 .why-bloomingdelights {
   display: flex;
   flex-direction: column;

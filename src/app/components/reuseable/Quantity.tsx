@@ -4,7 +4,7 @@ const QuantityButton = () => {
   const [quantity, setQuantity] = useState(1);
 
   const increment = () => setQuantity(prev => prev + 1);
-  const decrement = () => setQuantity(prev => Math.max(1, prev - 1)); // Never goes below 1
+  const decrement = () => setQuantity(prev => Math.max(1, prev - 1)); 
 
   return (
     <div className="flex items-center gap-2">

@@ -1,5 +1,5 @@
 import React from 'react';
-import './AddToCartSucceed.css'; // You'll want to create this CSS file
+import './AddToCartSucceed.css'; 
 
 const AddToCartSucceed = () => {
   return (
