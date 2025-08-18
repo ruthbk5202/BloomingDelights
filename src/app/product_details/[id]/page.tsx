@@ -7,6 +7,7 @@ import QuantityButton from "@/app/components/reuseable/Quantity";
 import { FaRegHeart } from "react-icons/fa";
 import Image from "next/image";
 import BuyNowButton from "@/app/components/reuseable/BuyNowButton";
+import AddToCartSucceed from "@/app/components/dialogcart/AddToCartSucceed";
 
 interface Product {
   id: number;
@@ -30,14 +31,18 @@ export default function ProductDetailsPage() {
   const [product, setProduct] = useState<Product | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [showAddToCartDialog, setAddToCartDialog]=useState(false);
 
+  const additionToCart = () =>{
+  
+    setAddToCartDialog(true);
+  }
   useEffect(() => {
     if (!id) {
       setError("No product ID found in URL");
       setLoading(false);
       return;
     }
-
     const fetchProduct = async () => {
       try {
         console.log(`Fetching: https://perenual.com/api/species/details/${id}`);
@@ -69,6 +74,7 @@ export default function ProductDetailsPage() {
   if (error) return <div className="error">Error: {error}</div>;
   if (!product) return <div>No product found</div>;
 
+  
   return (
      <div className="add-to-cart-product-details">
       <div className="product-details-container"> 
@@ -122,10 +128,28 @@ export default function ProductDetailsPage() {
           <QuantityButton /> 
           <div className="action-buttons">
            <BuyNowButton />
-        
+            <button className="add-to-cart-button px-4 py-2 rounded bg-blue-500 text-white custom-btn" onClick={additionToCart}>
+              Add to Cart
+            </button>
           </div>
         </div>
       </div>
+      {showAddToCartDialog &&(
+        <div className="add-to-cart-dialog">
+        <div>
+          <div className="dialog-close-btn">
+              <button 
+                className="close-btn"
+                onClick={() => setAddToCartDialog(false)}
+              >
+                 <span className="close-icon">×</span>
+              </button></div>
+          <h3>Success!</h3>
+          <p>Product added Successfully to cart</p>
+        </div>
+        </div>
+         
+      )}
     </div>
   );
 }

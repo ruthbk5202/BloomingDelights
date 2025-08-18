@@ -59,14 +59,8 @@ const Secondcomponent = () => {
           plants.slice(0, 6).map((plant) => (
             <div key={plant.id} className="grid-item">
               <div className="img-btn-group">
-                <div className="img-btn">
-                  <button className="img-btn-sale">sale!</button>
-                </div>
-                <div>
-                  <a>
-                    <MdOutlineShoppingCart />
-                  </a>
-                </div>
+                
+             
               </div>
               {plant.default_image ? (
                 <>
@@ -78,10 +72,10 @@ const Secondcomponent = () => {
                     onClick={() => router.push(`/product_details/${plant.id}`)}
                     style={{ cursor: "pointer" }}
                   />
-                  <div className="bouquet-description">
+                  {/* <div className="bouquet-description">
                     <p>{plant.common_name}</p>
                     <p>Nrs:500</p>
-                  </div>
+                  </div> */}
                 </>
               ) : (
                 <p>No Image Available</p>

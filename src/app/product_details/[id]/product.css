@@ -51,8 +51,86 @@
   display: flex;
   gap: 16px;
 }
+.add-to-cart-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  width: 400px; /* Increased from 300px */
+  max-width: 90%; /* Ensures it stays responsive */
+  z-index: 1000;
+  border: 1px solid #f0f0f0;
+}
 
+.add-to-cart-dialog > div {
+  position: relative; /* Needed for absolute positioning of close button */
+}
 
+.dialog-close-btn {
+  position: absolute;
+  top: -10px; /* Adjust as needed */
+  left: 316px; /* Adjust as needed */
+}
+
+.close-btn {
+  background: #f8f8f8;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  font-size: 1.5rem;
+  color: #666;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.close-btn:hover {
+  color: #333;
+  background: #f0f0f0;
+  transform: scale(1.05);
+}
+
+.close-icon {
+  display: inline-block;
+  line-height: 1;
+  margin-top: -2px; /* Small adjustment for perfect centering */
+}
+
+/* Dialog content styling */
+.add-to-cart-dialog h3 {
+  margin-top: 8px;
+  margin-bottom: 16px;
+  color: #2e7d32; /* Success green color */
+  font-size: 1.5rem;
+}
+
+.add-to-cart-dialog p {
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .add-to-cart-dialog {
+    width: 90%;
+    padding: 24px;
+  }
+  
+  .dialog-close-btn {
+    top: -5px;
+    right: -5px;
+  }
+}
 @media (max-width: 768px) {
   .product-details-container {
     flex-direction: column;
