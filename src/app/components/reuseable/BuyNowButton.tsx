@@ -10,7 +10,7 @@ const BuyNowButton = () => {
   const handleBuyNow = () => {
    
    
-    router.push('/buynow');
+    router.push('/DeliveryInfoForm');
   };
   return (
     <div>

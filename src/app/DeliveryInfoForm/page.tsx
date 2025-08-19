@@ -1,9 +1,16 @@
 "use client";
 import React from 'react';
 import Link from 'next/link';
+import {useState} from "react";
+import "../components/contactinfoedit/Invoice";
 import "./delivery.css"; 
+import Invoice from '../components/contactinfoedit/Invoice';
 
 const DeliveryInfoForm = () => {
+  const [isToggleOpened, setIsToggleOpened]=useState(false);
+  const handleEditClick =() =>{
+    setIsToggleOpened(!isToggleOpened);
+  }
   return (
     <div className='delivery-info-container'>
       <div>
@@ -68,9 +75,13 @@ const DeliveryInfoForm = () => {
           </div>
           <div className='invoice-contact'>
             <h3>Invoice and Contact Info</h3>
-            <Link href="/">
+            <Link href="" onClick={handleEditClick}>
               Edit
             </Link>
+            {isToggleOpened && <div className='invoice-edit'>
+              <Invoice/>
+              </div>
+              }
           </div>
           <div className='order-summary'>
             <h3>Order Summary</h3>

@@ -1,6 +1,7 @@
 "use client";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
+
 import "./product.css";
 
 import QuantityButton from "@/app/components/reuseable/Quantity";
@@ -32,7 +33,8 @@ export default function ProductDetailsPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [showAddToCartDialog, setAddToCartDialog]=useState(false);
-
+ 
+   
   const additionToCart = () =>{
   
     setAddToCartDialog(true);
@@ -127,7 +129,7 @@ export default function ProductDetailsPage() {
           </div>
           <QuantityButton /> 
           <div className="action-buttons">
-           <BuyNowButton />
+           <BuyNowButton  />
             <button className="add-to-cart-button px-4 py-2 rounded bg-blue-500 text-white custom-btn" onClick={additionToCart}>
               Add to Cart
             </button>

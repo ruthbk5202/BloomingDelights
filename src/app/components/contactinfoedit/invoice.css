@@ -1,0 +1,30 @@
+.cancel-save-button{
+    display:flex;
+    justify-content: space-between;
+}
+.invoice-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(247, 247, 230);
+    border: 1px solid #ccc;
+    width:auto;
+   padding: 20px;
+}
+.cancel{
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.save{
+    background-color: #4c77af;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
