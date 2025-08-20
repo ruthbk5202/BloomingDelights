@@ -3,11 +3,11 @@ import "./invoice.css";
 
 const Invoice= () => {
   return (
-    <div>
+    <div >
         <div className='invoice-div'>
      <input type="email"></input> 
      <p>Enter your email to get delivery status updates</p>
-     <div className="cancel-save-buttons">
+     <div className="Cancel-save-buttons">
         <button className="cancel">Cancel</button>
         <button className="save">Save</button>
      </div>

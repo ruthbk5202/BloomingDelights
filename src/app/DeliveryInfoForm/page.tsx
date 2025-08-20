@@ -7,12 +7,33 @@ import "./delivery.css";
 import Invoice from '../components/contactinfoedit/Invoice';
 
 const DeliveryInfoForm = () => {
-  const [isToggleOpened, setIsToggleOpened]=useState(false);
-  const handleEditClick =() =>{
+  const [isToggleOpened, setIsToggleOpened] = useState(false);
+  
+  const handleEditClick = (e: React.MouseEvent) => {
+    e.preventDefault();
     setIsToggleOpened(!isToggleOpened);
   }
+
+  const closeSidebar = () => {
+    setIsToggleOpened(false);
+  }
+
   return (
     <div className='delivery-info-container'>
+      
+      {isToggleOpened && <div className="sidebar-overlay" onClick={closeSidebar}></div>}
+      
+    
+      <div className={`invoice-sidebar ${isToggleOpened ? 'sidebar-open' : ''}`}>
+        <div className="sidebar-header">
+          <h3>Invoice and Contact Info</h3>
+          <button className="close-sidebar" onClick={closeSidebar}>×</button>
+        </div>
+        <div className="sidebar-content">
+          <Invoice/>
+        </div>
+      </div>
+
       <div>
         <h2 className='delivery-info-heading'>Delivery Information</h2>
         <form className='delivery-info-form'>
@@ -75,13 +96,9 @@ const DeliveryInfoForm = () => {
           </div>
           <div className='invoice-contact'>
             <h3>Invoice and Contact Info</h3>
-            <Link href="" onClick={handleEditClick}>
+            <Link href="#" onClick={handleEditClick}>
               Edit
             </Link>
-            {isToggleOpened && <div className='invoice-edit'>
-              <Invoice/>
-              </div>
-              }
           </div>
           <div className='order-summary'>
             <h3>Order Summary</h3>
