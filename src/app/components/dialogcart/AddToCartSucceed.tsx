@@ -11,7 +11,7 @@ const AddToCartSucceed = () => {
           height="48" 
           viewBox="0 0 24 24" 
           fill="none" 
-          stroke="#4BB543" 
+          stroke="#b7f1b2ff" 
           strokeWidth="3" 
           strokeLinecap="round" 
           strokeLinejoin="round" 
