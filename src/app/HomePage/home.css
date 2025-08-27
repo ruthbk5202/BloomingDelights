@@ -60,8 +60,8 @@
   font-family: 'Times New Roman', Times, serif;
 }
 .sub-option {
-  display: none; /* Hide sub-options by default */
-  padding-left: 20px; /* Indent sub-options */
+  display: none;
+  padding-left: 20px; 
 }
 .custom-dropdown {
   position: relative;
@@ -113,6 +113,6 @@
 .login-cart-button{
   display: flex;
   flex-direction: row;
-  justify-items: center;
-  align-items: center;
+  justify-items:space-between;
+
 }

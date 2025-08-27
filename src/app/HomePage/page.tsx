@@ -30,8 +30,9 @@ const HomePage = () => {
           <Link href="/login" className="login-container">
             <button className="login">Login</button> 
           </Link>
+          <Link href="/descriptionaddtocart">
             <button>
-            <MdOutlineShoppingCart className="cart" onClick={handlecartClick} /></button>
+            <MdOutlineShoppingCart className="cart" onClick={handlecartClick} /></button></Link>
         </div>
         </nav>
       </div>
