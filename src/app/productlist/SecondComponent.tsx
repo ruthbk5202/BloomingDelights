@@ -2,7 +2,7 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { MdOutlineShoppingCart } from "react-icons/md";
+
 import "./second_component.css";
 
 interface Plant {

@@ -8,7 +8,7 @@ import QuantityButton from "@/app/components/reuseable/Quantity";
 import { FaRegHeart } from "react-icons/fa";
 import Image from "next/image";
 import BuyNowButton from "@/app/components/reuseable/BuyNowButton";
-import AddToCartSucceed from "@/app/components/dialogcart/AddToCartSucceed";
+
 
 interface Product {
   id: number;

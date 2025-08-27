@@ -5,7 +5,7 @@ import "./invoice.css";
 const Invoice= () => {
   const [isBarVisible, setIsBarVisible]= useState(true);
   const handleCloseButton=()=>{
-
+    setIsBarVisible(false);
   }
   return (
 
