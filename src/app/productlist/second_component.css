@@ -79,6 +79,22 @@
   gap: 0.5rem;
   margin-top: 0.5rem;
 }
+.load-more-container{
+  display: flex;
+  justify-content: center;
+}
+.load-more {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  font:16px;
+  width: 380px;
+  height:42px;
+  margin-top: 1rem;
+  border:1px solid #13a149;
+  border-radius: 4px;
+  
+}
 
 .add-to-cart {
   border: none;
